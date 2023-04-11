@@ -1,6 +1,6 @@
 # xonotic-server
 
-# 🇫🇷
+🇫🇷
 
 ## Prérequis :
 - Avoir Git installé
