@@ -19,3 +19,10 @@ docker compose up -d
 ```
 
 3- Vérifier que le port 26000 est ouvert
+
+
+
+
+```bash
+docker run --privileged --rm tonistiigi/binfmt --install all
+```
