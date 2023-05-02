@@ -11,3 +11,4 @@ services:
       - ./server.cfg:/Xonotic/data/server.cfg:rw
     ports:
       - 26000:26000/udp
+    platform: linux/amd64
