@@ -1,5 +1,7 @@
 FROM debian:11-slim
 
+ARG VERSION
+
 RUN apt update && \
     apt upgrade -y && \
     apt install -y wget unzip curl

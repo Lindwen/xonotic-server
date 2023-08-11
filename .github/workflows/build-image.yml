@@ -26,11 +26,11 @@ jobs:
 
     - name: Build and push
       uses: docker/build-push-action@v2
-      env:
-        VERSION: ${{ vars.VERSION }}
       with:
         context: .
         file: ./Dockerfile
         platforms: linux/arm64,linux/amd64
         push: true
-        tags: ghcr.io/lindwen/xonotic:${{ env.VERSION }}
+        args:
+          VERSION=${{ vars.VERSION }}
+        tags: ghcr.io/lindwen/xonotic:${{ vars.VERSION }}
