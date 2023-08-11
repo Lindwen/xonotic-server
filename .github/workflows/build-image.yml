@@ -27,7 +27,7 @@ jobs:
     - name: Get Dockerfile version
       id: get_version
       run: |
-        version=$(grep 'ARG XONOTIC_VERSION=' Dockerfile | sed -e 's/.*XONOTIC_VERSION=\(.*\) .*/\1/')
+        version=$(grep 'LABEL version=' Dockerfile | sed -e 's/.*version="\([^"]*\)".*/\1/')
         echo "VERSION=${version}" >> $GITHUB_ENV
 
     - name: Build and push

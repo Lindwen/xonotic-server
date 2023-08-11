@@ -1,6 +1,7 @@
 FROM debian:11-slim
 
 ARG XONOTIC_VERSION=0.8.5
+LABEL version=$XONOTIC_VERSION
 
 RUN apt update && \
     apt upgrade -y && \
