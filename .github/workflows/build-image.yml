@@ -33,4 +33,4 @@ jobs:
         file: ./Dockerfile
         platforms: linux/arm64,linux/amd64
         push: true
-        tags: ghcr.io/lindwen/xonotic:${{ vars.VERSION }}
+        tags: ghcr.io/lindwen/xonotic:${{ env.VERSION }}
