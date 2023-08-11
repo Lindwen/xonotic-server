@@ -31,4 +31,4 @@ jobs:
         file: ./Dockerfile
         platforms: linux/arm64,linux/amd64
         push: true
-        tags: ghcr.io/${{ github.repository }}/xonotic:${{ env.VERSION }}
+        tags: ghcr.io/${{ github.repository }}/xonotic:${{ vars.VERSION }}
