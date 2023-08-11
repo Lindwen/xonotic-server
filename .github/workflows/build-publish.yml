@@ -34,4 +34,5 @@ jobs:
             VERSION=${{ vars.VERSION }}
           push: true
           file: ./Dockerfile
+          platforms: linux/arm64,linux/amd64
           tags: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ vars.VERSION }}
