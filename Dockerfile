@@ -1,17 +1,14 @@
 FROM debian:11-slim
 
-ARG XONOTIC_VERSION=0.8.5
-LABEL version=$XONOTIC_VERSION
-
 RUN apt update && \
     apt upgrade -y && \
     apt install -y wget unzip curl
 
-RUN wget https://dl.illwieckz.net/share/xonotic/release/xonotic-${XONOTIC_VERSION}.zip
+RUN wget https://dl.illwieckz.net/share/xonotic/release/xonotic-${VERSION}.zip
 
-RUN unzip xonotic-${XONOTIC_VERSION}.zip
+RUN unzip xonotic-${VERSION}.zip
 
-RUN rm xonotic-${XONOTIC_VERSION}.zip
+RUN rm xonotic-${VERSION}.zip
 
 RUN cp /Xonotic/server/server.cfg /Xonotic/data/
 
